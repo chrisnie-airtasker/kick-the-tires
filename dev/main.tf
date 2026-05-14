@@ -26,6 +26,23 @@ provider "aws" {
 
 data "aws_caller_identity" "current" {}
 
+data "aws_caller_identity" "engineer" {
+  provider = aws.engineer
+}
+
 output "caller_arn" {
   value = data.aws_caller_identity.current.arn
+}
+
+output "engineer_arn" {
+  value = data.aws_caller_identity.engineer.arn
+}
+
+data "aws_s3_objects" "my_objects" {
+  provider = aws.engineer
+  bucket = "ztnie-airtasker-terraform-poc-backend"
+}
+
+output "object_keys" {
+  value = data.aws_s3_objects.my_objects.keys
 }
