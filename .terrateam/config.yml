@@ -1,9 +1,5 @@
-dirs:
-  projects/networking: {}
-  projects/compute: {}
-  projects/database: {}
-  projects/storage: {}
-  projects/monitoring: {}
+indexer:
+  enabled: true
 
 hooks:
   all:
