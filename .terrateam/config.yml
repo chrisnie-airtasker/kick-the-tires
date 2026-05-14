@@ -1,10 +1,9 @@
-env:
-  - name: AWS_CONFIG_FILE
-    value: "${TERRATEAM_ROOT}/.terrateam/.aws_config"
-
 hooks:
   all:
     pre:
       - type: oidc
         provider: aws
         role_arn: "arn:aws:iam::010438481177:role/terrateam"
+      - type: env
+        name: AWS_CONFIG_FILE
+        cmd: ['echo', '$TERRATEAM_ROOT/.terrateam/.aws_config']
