@@ -1,3 +1,10 @@
+dirs:
+  projects/networking: {}
+  projects/compute: {}
+  projects/database: {}
+  projects/storage: {}
+  projects/monitoring: {}
+
 hooks:
   all:
     pre:
