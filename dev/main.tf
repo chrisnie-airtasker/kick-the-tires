@@ -18,6 +18,12 @@ provider "aws" {
   region = "ap-southeast-2"
 }
 
+provider "aws" {
+  region = "ap-southeast-2"
+  alias = "engineer"
+  profile = "engineer"
+}
+
 data "aws_caller_identity" "current" {}
 
 output "caller_arn" {

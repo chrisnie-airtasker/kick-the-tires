@@ -1,3 +1,7 @@
+env:
+  - name: AWS_CONFIG_FILE
+    value: "${TERRATEAM_ROOT}/.terrateam/.aws_config"
+
 hooks:
   all:
     pre:
