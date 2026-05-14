@@ -2,3 +2,8 @@
 role_arn = arn:aws:iam::010438481177:role/TestEngineer
 region = ap-southeast-2
 credential_source = Environment
+
+[profile infra]
+role_arn = arn:aws:iam::010438481177:role/TestInfra
+region = ap-southeast-2
+credential_source = Environment

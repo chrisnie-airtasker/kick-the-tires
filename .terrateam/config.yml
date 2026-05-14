@@ -1,3 +1,12 @@
+indexer:
+  enabled: true
+
+dirs:
+  projects/compute:
+    workspaces:
+      default: {}
+      prod: {}
+
 hooks:
   all:
     pre:
