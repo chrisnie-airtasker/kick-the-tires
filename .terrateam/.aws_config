@@ -1,0 +1,4 @@
+[profile engineer]
+role_arn = arn:aws:iam::010438481177:role/TestEngineer
+region = ap-southeast-2
+credential_source = Environment
