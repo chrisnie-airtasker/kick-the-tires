@@ -32,7 +32,7 @@ provider "aws" {
 }
 
 locals {
-  resource_count = terraform.workspace == "prod" ? 4 : 2
+  resource_count = terraform.workspace == "prod" ? 3 : 3
 }
 
 module "compute" {
