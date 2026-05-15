@@ -5,7 +5,8 @@ dirs:
   projects/compute:
     workspaces:
       default: {}
-      prod: {}
+      prod: 
+        tags: ["prod"]
 
 drift:
   enabled: true
@@ -13,6 +14,14 @@ drift:
     default:
       tag_query: ''
       schedule: hourly
+
+apply_requirements:
+  create_pending_apply_check: true
+  checks:
+    - tag_query: "prod"
+      approved:
+        enabled: true
+        any_of: ["user:chrisnie-airtasker"]
 
 hooks:
   all:
