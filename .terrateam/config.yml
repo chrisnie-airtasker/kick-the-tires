@@ -22,6 +22,11 @@ apply_requirements:
       approved:
         enabled: true
         any_of: ["user:chrisnie-airtasker"]
+      merge_conflicts:
+        enabled: true
+    - tag_query: ""  # fallback catch-all
+      approved:
+        enabled: false
 
 hooks:
   all:
